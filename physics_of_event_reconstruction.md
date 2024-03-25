@@ -1,19 +1,37 @@
-# Particle Physics and Event Reconstruction
+# Reconstruction of charged B-mesons and calculating CP Asymmetry (Why the Universe has more matter than antimatter?).
 
-## Introduction
-Particle physics aims to understand the fundamental building blocks of the universe and the forces that govern their interactions. Collider experiments play a crucial role in this endeavor, where particles are accelerated to high energies and collided to study their behavior and interactions. Event reconstruction is a fundamental aspect of collider experiments, involving the detection and analysis of particles produced in these collisions.
+# Introduction to CP Asymmetry
+In the context of the provided code for event reconstruction and analysis, the concept of CP (Charge-Parity) asymmetry plays a significant role in understanding the fundamental properties of particles and their interactions. CP asymmetry refers to the difference in the behavior of particles and antiparticles under the combined operations of charge conjugation (C) and parity transformation (P). Specifically, the measurement of CP asymmetry provides insights into the violation of CP symmetry in particle physics, which is a phenomenon observed in certain particle decays where the behavior of particles and antiparticles differ. In the code, calculating the CP asymmetry involves analyzing the distribution of reconstructed invariant masses of B⁺ and B⁻ mesons, which are charged B-mesons decaying into three charged hadrons. By quantifying the asymmetry between the number of B⁺ and B⁻ decays, the code aims to elucidate any deviations from CP symmetry, shedding light on the underlying dynamics of particle interactions. Thus, the calculation of CP asymmetry in the code serves as a crucial tool for probing fundamental symmetries in particle physics.
 
-## Collider Physics Overview
-Collider experiments involve accelerating particles to high energies using particle accelerators and colliding them at designated collision points within detectors. These collisions produce a multitude of particles, which are then detected and analyzed to study their properties and interactions.
+# Decay Channel
 
-### Accelerators
-Particle accelerators, such as the Large Hadron Collider (LHC) at CERN, accelerate particles to high energies using electromagnetic fields. These particles are typically protons or heavy ions, and they are accelerated to velocities close to the speed of light.
+The decay channel used for this analysis involves the decay of a charged B-meson (B⁺ or B⁻) into three hadrons. This decay process is mediated by the weak force and is one of the important channels studied in particle physics experiments. The three hadrons typically consist of a combination of mesons (particles composed of a quark and an antiquark) or baryons (particles composed of three quarks).
 
-### Collisions
-Accelerated particles are collided head-on or at grazing angles at collision points within detectors. High-energy collisions produce a wide range of particles, including known particles as well as new, potentially undiscovered ones. These collisions mimic conditions similar to those present in the early universe, allowing scientists to study fundamental physics phenomena.
+The decay process can be represented by the following general formula:
 
-### Detectors
-Detectors surrounding the collision points are designed to detect and measure the properties of particles produced in the collisions. These detectors are complex instruments composed of various sub-detectors, each optimized for detecting different types of particles and measuring specific properties such as energy, momentum, and charge.
+$$ B^\pm \rightarrow H_1 H_2 H_3 $$
+
+where H_1, H_2, and H_3 represent the three hadrons produced in the decay. The specific particles involved in the decay depend on the particular decay mode and the properties of the B-meson.
+
+This decay channel is of particular interest in studies of CP violation and particle interactions. By analyzing the properties of the final-state hadrons, we can gain insights into the underlying dynamics of the weak interactions and probe for possible deviations from the predictions of the Standard Model of particle physics. This will allow us to answer the basic question, "Why the Universe have more matter than antimatter?" Theoretically, matter and antimatter should have been produced in equal proportions, annihilating each other out! We know this is not the case. 
+
+
+# Investigating CP Asymmetry with Colliders
+
+Colliders play a crucial role in investigating CP asymmetry by providing environments where high-energy collisions between particles occur, allowing us to study the behavior of matter and antimatter particles in detail. Here's how colliders help us investigate CP asymmetry:
+
+1. **Production of Particle-Antiparticle Pairs**: Colliders, such as the Large Hadron Collider (LHC) at CERN, accelerate particles to extremely high energies and collide them head-on or at grazing angles. These collisions produce large numbers of particle-antiparticle pairs, including B-mesons and their antiparticles (B⁺ and B⁻). By analyzing the properties of these particles and their decays, we can study CP asymmetry.
+
+2. **Decay Processes**: B-mesons, can decay into a variety of final states. By studying the decay patterns and rates of B-mesons and their antiparticles, scientists can look for differences in the behavior of particles and antiparticles, which may indicate CP violation.
+
+3. **Precise Measurements**: Colliders provide high collision energies and sophisticated detectors that allow for precise measurements of particle properties, such as momentum, energy, and decay products. These measurements are essential for accurately determining the properties of B-mesons and their decays, enabling scientists to study CP asymmetry with high precision.
+
+4. **Search for New Physics**: CP violation beyond what is predicted by the Standard Model of particle physics could indicate the presence of new fundamental particles or interactions. Colliders with high collision energies allows us to explore energy regimes where new physics may manifest, providing opportunities to search for phenomena that could explain the observed CP asymmetry.
+
+5. **Comparison with Theoretical Predictions**: Experimental measurements of CP asymmetry at colliders can be compared with theoretical predictions based on the Standard Model and its extensions. Any deviations between experimental observations and theoretical predictions may indicate the presence of new physics phenomena or inconsistencies in our current understanding of particle interactions.
+
+Overall, colliders play a central role in investigating CP asymmetry by providing the means to produce, study, and analyze large numbers of particles and their interactions. Through precise measurements and comparisons with theoretical predictions, colliders help advance our understanding of the fundamental symmetries and properties of the universe.
+
 
 ## Event Reconstruction Process
 Event reconstruction is the process of identifying and analyzing particles produced in collider collisions based on the signals recorded by detectors. The event reconstruction process typically involves several steps:
@@ -50,5 +68,5 @@ On loading and running the C++ macro on ROOT software, the following output is g
 
 ![Screenshot 2024-03-25 120256](https://github.com/ubsuny/MLppCollision_CP2P2024/assets/143828394/3cbd237b-506d-4479-9a5a-1e24f1304672)
 
-The results successfully reproduce the mass of charged B-mesons i.e 5.279 GeV and also indicate a difference in the number of B+ and B- mesons, the reason for this asymmetry is still not fully understood but is a well-observed phenomenon.
-Measured CP Asymmetry is -0.0359549 with an uncertainty of 0.00751989.
+The results successfully reproduce the mass of charged B-mesons i.e **5.279 GeV** and also indicate a difference in the number of B+ and B- mesons, the reason for this asymmetry is still not fully understood but is a well-observed phenomenon.
+Measured CP Asymmetry is **-0.0359549** with an uncertainty of **0.00751989**.
