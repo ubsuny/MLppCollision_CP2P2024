@@ -1,3 +1,37 @@
+## Event Reconstruction and Signal Extraction: Bridging B Meson and Higgs Boson Decays
+## 1) Using Machine Learning Technique.
+
+Earlier we used ROOT and C++ to extract B-meson signal from the background. The background was not that noisy and the B-meson peak was conspicuous. The idea was that if we need to study the properties of exotic particles such as their mass, we need to isolate them from the background. We separated charged B-mesons and calculated CP Asymmetry. However, it was a relatively clean signal with very little background but it may not be the case with other particles such as Higgs Boson. Higgs can also decay through multiple channels and one of the decays is $(\ H \rightarrow [ZZ][4l] \)$ This decay has an overlapping signal and background for Z boson jets and we can not eyeball the results to estimate the jet mass. For such cases, we can use Machine Learning techniques to identify signal. Once we have identified the signal we can measure its properties such as mass e.t.c.
+
+### Signal Extraction: Higgs Boson Decay
+
+#### Collision and Detection
+
+Higgs bosons, when produced in high-energy collisions, can decay into various final states. One important decay mode is into two Z bosons, each of which further decays into four leptons (electrons or muons).
+
+#### Signal Extraction with XGBoost
+
+In the analysis of Higgs boson decays, machine learning techniques like XGBoost are employed to separate signal from background:
+
+- **Feature Extraction**: Relevant features such as lepton momenta, angles, and invariant masses are extracted from the reconstructed events.
+
+- **Training the XGBoost Model**: A machine learning model (e.g., XGBoost) is trained on simulated events to learn the characteristic features of signal and background events.
+
+- **Signal Extraction**: The trained model is applied to experimental data, assigning a "score" to each event indicating the likelihood of being a signal. Events with high scores are considered potential signal candidates.
+
+### Bridging the Gap
+
+While the methods used for B meson and Higgs boson analyses may seem distinct, they share a common underlying principle: the separation of signal from background.
+
+- Both analyses start with the reconstruction of events based on the known properties of the particles involved.
+
+- They then employ statistical or machine learning techniques to distinguish between signal events of interest and background events.
+
+- Whether using ROOT for B meson decays or XGBoost for Higgs boson decays, the goal remains the same: to maximize the signal-to-background ratio and enhance the sensitivity of the analysis.
+
+By understanding and applying these principles, we can extract valuable information from complex data.
+
+
 # Analysis of Higgs Decay into Two Z-Bosons and 4 Leptons
 
 In this analysis, we investigated the decay of the Higgs boson into two Z-bosons, each of which subsequently decays into two leptons (4 leptons in total). The goal was to distinguish between signal events (Higgs boson decay) and background events (other processes that mimic the signal) based on certain observables.
@@ -50,12 +84,20 @@ The decision boundary plot allows us to visualize how the model distinguishes be
 
 ![Screenshot 2024-05-08 192046](https://github.com/ubsuny/MLppCollision_CP2P2024/assets/143828394/4fbabfa2-6263-47cf-9e51-eb309347fed2)
 
+## Results
+
+Just by looking at the plot for f_massjj (Mass of Z-boson jet) we may think that the signal is around 375 GeV but from our Decision Boundary Plot, we can see most of the Z-boson jest mass is concentrated around **125 GeV** (The red dots). This is in fact consistent with the known Z-boson jet mass for this decay channel i.e. **124.79 GeV** (See reference below). This example elucidates the importance of ML techniques and how it can be used to handle noisy backgrounds.
+
 
 ## Conclusion
 
 Using the XGBoost classifier in the CMS LPC environment, we were able to build a Boosted Decision Tree (BDT) model that effectively separates signal events (Higgs decay) from background events. This analysis contributes to the understanding of the Higgs boson decay process and helps in identifying key observables that can discriminate between signal and background events.
 
-# Reconstruction of charged B-mesons and calculating CP Asymmetry (Why the Universe has more matter than antimatter?).
+## Reference
+Measurement of the Higgs boson mass in the H → ZZ⁎ → 4ℓ and H → γγ channels with s=13 TeV pp collisions using the ATLAS detector. Physics Letters B, 784, 345-366, 2018. 
+
+## 2) Event reconstruction basics without using Machine Learning
+## Reconstruction of charged B-mesons and calculating CP Asymmetry
 
 # Introduction to CP Asymmetry
 In the context of the provided code for event reconstruction and analysis, the concept of CP (Charge-Parity) asymmetry plays a significant role in understanding the fundamental properties of particles and their interactions. CP asymmetry refers to the difference in the behavior of particles and antiparticles under the combined operations of charge conjugation (C) and parity transformation (P). Specifically, the measurement of CP asymmetry provides insights into the violation of CP symmetry in particle physics, which is a phenomenon observed in certain particle decays where the behavior of particles and antiparticles differ. In the code, calculating the CP asymmetry involves analyzing the distribution of reconstructed invariant masses of B⁺ and B⁻ mesons, which are charged B-mesons decaying into three charged hadrons. By quantifying the asymmetry between the number of B⁺ and B⁻ decays, the code aims to elucidate any deviations from CP symmetry, shedding light on the underlying dynamics of particle interactions. Thus, the calculation of CP asymmetry in the code serves as a crucial tool for probing fundamental symmetries in particle physics.
